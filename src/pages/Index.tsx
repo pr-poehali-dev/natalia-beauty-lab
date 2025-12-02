@@ -86,6 +86,48 @@ const Index = () => {
       description: 'Нежная текстура с натуральными частицами для глубокого очищения',
       price: '2 800₽',
       image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/e3ab7639-cce3-4f92-856f-0fb2e697c127.jpg'
+    },
+    { 
+      name: 'Крем с пептидами', 
+      category: 'Антивозрастной уход', 
+      description: 'Мощный комплекс пептидов для упругости и разглаживания морщин',
+      price: '5 900₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/0c7f211c-26b3-4027-b47a-d2901e767244.jpg'
+    },
+    { 
+      name: 'Сыворотка с ретинолом', 
+      category: 'Обновление кожи', 
+      description: 'Эффективная формула для борьбы с возрастными изменениями',
+      price: '4 800₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/7845665a-b06d-4eb7-af2c-4a6595f49eeb.jpg'
+    },
+    { 
+      name: 'Ночной крем для лица', 
+      category: 'Восстановление', 
+      description: 'Интенсивное питание и восстановление кожи во время сна',
+      price: '4 100₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/cd544a1b-683f-42f5-8ab5-3c906556fecd.jpg'
+    },
+    { 
+      name: 'Патчи для области вокруг глаз', 
+      category: 'Уход за кожей вокруг глаз', 
+      description: 'Гидрогелевые патчи для мгновенного увлажнения и свежести взгляда',
+      price: '1 900₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/62a45701-3d73-469b-b063-9b2f24df1247.jpg'
+    },
+    { 
+      name: 'Пена для умывания', 
+      category: 'Очищение', 
+      description: 'Нежная воздушная пена для бережного очищения без пересушивания',
+      price: '2 400₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/cae0e82f-057c-43b5-8b82-a15648afc368.jpg'
+    },
+    { 
+      name: 'Энзимный скраб', 
+      category: 'Глубокое очищение', 
+      description: 'Деликатное отшелушивание с натуральными энзимами папайи',
+      price: '3 200₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/cca3ab1c-2626-4e77-8dc8-16393428e9b6.jpg'
     }
   ];
 
