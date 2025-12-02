@@ -66,10 +66,45 @@ const Index = () => {
   ];
 
   const products = [
-    { name: 'Витамин C сыворотка', category: 'Для сияния', rating: 5 },
-    { name: 'Гиалуроновая кислота', category: 'Увлажнение', rating: 5 },
-    { name: 'Ретинол крем', category: 'Антивозрастной', rating: 4 },
-    { name: 'Мягкий пилинг', category: 'Очищение', rating: 5 }
+    { 
+      name: 'Увлажняющий крем для лица', 
+      category: 'Интенсивное увлажнение', 
+      description: 'Насыщенная формула с гиалуроновой кислотой и маслом ши',
+      price: '3 500₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/6698b2a0-97de-424e-b392-792bd6927001.jpg'
+    },
+    { 
+      name: 'Сыворотка с витамином C', 
+      category: 'Сияние и антиоксиданты', 
+      description: 'Концентрированная формула для ровного тона и сияния кожи',
+      price: '4 200₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/2ff50af1-7dc8-45eb-b8cd-4be767ab5516.jpg'
+    },
+    { 
+      name: 'Деликатный скраб для лица', 
+      category: 'Мягкое обновление', 
+      description: 'Нежная текстура с натуральными частицами для глубокого очищения',
+      price: '2 800₽',
+      image: 'https://cdn.poehali.dev/projects/c2876e9c-b98c-4b3a-97cb-fa49de2b1962/files/e3ab7639-cce3-4f92-856f-0fb2e697c127.jpg'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Анна Петрова',
+      text: 'Наталья помогла мне подобрать идеальную программу ухода. Моя кожа преобразилась за месяц!',
+      rating: 5
+    },
+    {
+      name: 'Екатерина Соколова',
+      text: 'Профессиональный подход и внимание к деталям. Рекомендую всем, кто ищет качественную консультацию.',
+      rating: 5
+    },
+    {
+      name: 'Мария Иванова',
+      text: 'Продукты из линейки Natalia Beauty Lab — лучшее, что я пробовала. Видимый результат!',
+      rating: 5
+    }
   ];
 
   const skinTypeRecommendations = {
@@ -102,13 +137,12 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-primary">Natalia Beauty Lab</h1>
             <div className="hidden md:flex gap-8 items-center">
+              <a href="#about" className="text-sm hover:text-primary transition-colors">О нас</a>
               <a href="#services" className="text-sm hover:text-primary transition-colors">Услуги</a>
-              <a href="#test" className="text-sm hover:text-primary transition-colors">Тест кожи</a>
-              <a href="#blog" className="text-sm hover:text-primary transition-colors">Блог</a>
               <a href="#products" className="text-sm hover:text-primary transition-colors">Продукты</a>
+              <a href="#testimonials" className="text-sm hover:text-primary transition-colors">Отзывы</a>
               <a href="#contact" className="text-sm hover:text-primary transition-colors">Контакты</a>
             </div>
-            <Button>Записаться</Button>
           </div>
         </div>
       </nav>
@@ -124,11 +158,11 @@ const Index = () => {
                 Профессиональные рекомендации по уходу за кожей и подбору косметики от практикующего косметолога
               </p>
               <div className="flex gap-4">
-                <Button size="lg" className="text-lg px-8">
+                <Button size="lg" className="text-lg px-8" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                   Консультация
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
-                  Узнать больше
+                <Button size="lg" variant="outline" className="text-lg px-8" onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Наши продукты
                 </Button>
               </div>
             </div>
@@ -139,6 +173,46 @@ const Index = () => {
                 alt="Natalia Aizenberg"
                 className="relative rounded-3xl shadow-2xl w-full object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="py-20 px-4 bg-gradient-to-br from-accent/10 to-secondary/10">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">О нас</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-4">Natalia Beauty Lab</h3>
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                Мы создали бренд, который объединяет профессиональную экспертизу и персональный подход к красоте.
+              </p>
+              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                Наталья Айзенберг — практикующий косметолог с 10-летним опытом, помогает клиентам найти идеальные решения для ухода за кожей.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Наши продукты созданы с учетом последних научных исследований и проверены временем.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              <Card className="p-6 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">10+</div>
+                <p className="text-muted-foreground">лет опыта</p>
+              </Card>
+              <Card className="p-6 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                <p className="text-muted-foreground">довольных клиентов</p>
+              </Card>
+              <Card className="p-6 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">3</div>
+                <p className="text-muted-foreground">уникальных продукта</p>
+              </Card>
+              <Card className="p-6 text-center">
+                <div className="text-4xl font-bold text-primary mb-2">100%</div>
+                <p className="text-muted-foreground">натуральные формулы</p>
+              </Card>
             </div>
           </div>
         </div>
@@ -269,32 +343,64 @@ const Index = () => {
       </section>
 
       <section id="products" className="py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши продукты</h2>
+            <p className="text-xl text-muted-foreground">Профессиональная линейка по уходу за кожей</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {products.map((product, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+                <div className="aspect-square overflow-hidden bg-gradient-to-br from-secondary/20 to-accent/20">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-2xl">{product.name}</CardTitle>
+                  <CardDescription className="text-base">{product.category}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">{product.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-primary">{product.price}</span>
+                    <Button>
+                      <Icon name="ShoppingCart" size={18} className="mr-2" />
+                      Купить
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Рекомендуемые продукты</h2>
-            <p className="text-xl text-muted-foreground">Проверенные средства для вашей кожи</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Отзывы клиентов</h2>
+            <p className="text-xl text-muted-foreground">Что говорят о нас</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {products.map((product, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                    <p className="text-muted-foreground mb-3">{product.category}</p>
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Icon 
-                          key={i} 
-                          name={i < product.rating ? "Star" : "Star"} 
-                          size={18}
-                          className={i < product.rating ? "text-primary fill-primary" : "text-muted"}
-                        />
-                      ))}
-                    </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="p-8 hover:shadow-lg transition-all">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Icon key={i} name="Star" size={20} className="text-primary fill-primary" />
+                  ))}
+                </div>
+                <p className="text-lg mb-6 leading-relaxed">"{testimonial.text}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Icon name="User" className="text-primary" size={24} />
                   </div>
-                  <Button variant="outline" size="icon">
-                    <Icon name="ShoppingCart" size={20} />
-                  </Button>
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">Клиент</p>
+                  </div>
                 </div>
               </Card>
             ))}
