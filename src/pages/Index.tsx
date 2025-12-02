@@ -193,8 +193,9 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
+              <p className="text-xl text-muted-foreground mb-3">Вас встречает</p>
               <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Your Personal Guide to Beauty
+                Natalia Beauty Lab
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 Профессиональные рекомендации по уходу за кожей и подбору косметики от практикующего косметолога
